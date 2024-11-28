@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Regulations</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            color: #444;
+            margin: 20px 0;
+            font-size: 1.5em;
+        }
+
+		.map { width: 100%; }
+		
+        /* Table Styles */
+        .regulations-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .regulations-table th,
+        .regulations-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .regulations-table th {
+            background-color: #f8f8f8;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .regulations-table tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        /* Fish Gallery Styles */
+        .fish-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .fish-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .fish-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .fish-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .fish-info {
+            padding: 10px;
+            background-color: #f8f8f8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .regulations-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .fish-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kaikōura Fish Regulations and Species Guide </h1>
+        
+        <h2 class="section-title">Fishing Regulations</h2>
+        <table class="regulations-table">
+            <thead>
+                <tr>
+                    <th>Species</th>
+                    <th>Daily Limit</th>
+                    <th>Length (cm)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Blue cod Kaikōura Marine Area</td>
+                    <td>6</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>Blue cod Taiāpure</td>
+                    <td>2</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>Blue moki</td>
+                    <td>10</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>Butterfish</td>
+                    <td>10</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>Red cod</td>
+                    <td>10</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Red gurnard</td>
+                    <td>-</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Sea perch</td>
+                    <td>20</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>Tarakihi</td>
+                    <td>10</td>
+                    <td>25</td>
+                </tr>
+				<tr>
+                    <td>Cray Fish Male</td>
+                    <td>6 Total Male or Female</td>
+                    <td>54 mm</td>
+                </tr>
+				<tr>
+                    <td>Cray Fish Female</td>
+                    <td>6 Total Male or Female</td>
+                    <td>60 mm</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="section-title">Fish Species Gallery</h2>
+        <div class="fish-gallery">
+            <div class="fish-card">
+                <img src="BlueCod.png" alt="Blue Cod - Dark colored fish with spiky dorsal fin" class="fish-image">
+                <div class="fish-info">Blue Cod :: 33cm</div>
+            </div>
+            <div class="fish-card">
+                <img src="BlueMoki.png" alt="Blue Moki - Silver-grey fish with forked tail" class="fish-image">
+                <div class="fish-info">Blue Moki :: 40cm</div>
+            </div>
+            <div class="fish-card">
+                <img src="Gurnard.png" alt="Gurnard - Red fish with prominent barbels" class="fish-image">
+                <div class="fish-info">Gurnard :: 25cm</div>
+            </div>
+            <div class="fish-card">
+                <img src="RedCod.png" alt="Red Cod - Pink-white colored fish" class="fish-image">
+                <div class="fish-info">Red Cod :: 25cm</div>
+            </div>
+            <div class="fish-card">
+                <img src="SeaPerch.png" alt="Sea Perch - Orange-red spiny fish" class="fish-image">
+                <div class="fish-info">Sea Perch :: 26cm</div>
+            </div>
+			<div class="fish-card">
+                <img src="Tarakihi.png" alt="Tarakihi - Silver-grey fish with forked tail" class="fish-image">
+                <div class="fish-info">Tarakihi :: 25cm</div>
+            </div>
+			<div class="fish-card">
+                <img src="CrayFish.png" alt="Cray Fish - Orange-red spiny fish" class="fish-image">
+                <div class="fish-info">Cray Fish :: Male 54mm, Female 60mm</div>
+            </div>
+        </div>
+		<h2 class="section-title">Maps</h2>
+		<img src="map01.png" alt="Kaikōura Map" class="map">
+    </div>
+
+    <script>
+        // Add sorting functionality to the table
+        document.querySelectorAll('th').forEach((header, index) => {
+            header.addEventListener('click', () => {
+                const table = document.querySelector('.regulations-table');
+                const rows = Array.from(table.querySelectorAll('tbody tr'));
+                const isNumeric = index > 0; // For daily limit and length columns
+
+                rows.sort((a, b) => {
+                    const aValue = a.cells[index].textContent;
+                    const bValue = b.cells[index].textContent;
+
+                    if (isNumeric) {
+                        return parseFloat(aValue) - parseFloat(bValue);
+                    } else {
+                        return aValue.localeCompare(bValue);
+                    }
+                });
+
+                // Toggle sorting direction
+                if (header.classList.contains('sorted-asc')) {
+                    rows.reverse();
+                    header.classList.remove('sorted-asc');
+                    header.classList.add('sorted-desc');
+                } else {
+                    header.classList.remove('sorted-desc');
+                    header.classList.add('sorted-asc');
+                }
+
+                // Clear existing rows and append sorted rows
+                const tbody = table.querySelector('tbody');
+                tbody.innerHTML = '';
+                rows.forEach(row => tbody.appendChild(row));
+            });
+        });
+    </script>
+</body>
+</html>
